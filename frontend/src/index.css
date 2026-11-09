@@ -77,20 +77,24 @@ h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
+
   @media (max-width: 1024px) {
     font-size: 36px;
     margin: 20px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }
@@ -108,4 +112,120 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/* =========================================
+   ADVANCED TASK SETTINGS
+   ========================================= */
+
+.settings-section {
+  padding-top: 13px;
+  margin-top: 13px;
+  border-top: 1px solid #293f60;
+}
+
+.settings-section h3 {
+  margin: 0 0 12px;
+  color: #eaf2ff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.settings-hint {
+  display: block;
+  margin: -5px 0 12px;
+  color: #8298ba;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.field-label textarea {
+  width: 100%;
+  min-height: 65px;
+  padding: 10px 11px;
+  resize: vertical;
+  outline: none;
+  color: #edf4ff;
+  background: #0b1a33;
+  border: 1px solid #31496d;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 11px;
+}
+
+.field-label textarea:focus {
+  border-color: #388df0;
+  box-shadow: 0 0 0 3px rgba(22, 119, 255, 0.12);
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 10px;
+}
+
+.settings-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 8px 0 14px;
+  color: #c2d2e9;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.settings-checkbox input {
+  width: 15px;
+  height: 15px;
+  accent-color: #1677ff;
+}
+
+.settings-divider {
+  height: 1px;
+  margin: 12px 0;
+  background: #293f60;
+}
+
+.branch-handle-label {
+  position: absolute;
+  z-index: 5;
+  bottom: -19px;
+  color: #a9c9f2;
+  font-size: 9px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.branch-handle-true {
+  left: 24%;
+}
+
+.branch-handle-false {
+  right: 20%;
+}
+
+.task-node-conditional {
+  border-color: #9275ff;
+}
+
+.task-node-conditional .task-node-icon {
+  color: #b7a4ff;
+  background: rgba(146, 117, 255, 0.17);
+}
+
+.settings-warning {
+  padding: 9px;
+  margin: 5px 0 12px;
+  color: #ffd28a;
+  background: rgba(245, 158, 11, 0.09);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 8px;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 650px) {
+  .settings-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
